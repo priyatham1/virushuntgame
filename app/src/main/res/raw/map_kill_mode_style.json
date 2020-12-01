@@ -1,0 +1,14 @@
+[
+  {
+    "featureType": "landscape",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#fdc4c4"
+      },
+      {
+        "lightness": 35
+      }
+    ]
+  }
+]

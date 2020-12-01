@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:padding="0dip"
+    tools:context=".AboutActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:theme="@style/Theme.MaterialComponents">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2">
+
+        <LinearLayout
+            android:id="@+id/heading_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/about_ch_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.MaterialComponents.CardView"
+                app:cardBackgroundColor="#FFCE21"
+                android:layout_margin="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#FFCE21"
+                app:cardElevation="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <ImageView
+                android:id="@+id/about_logo_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/logo_in_app" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="1dp"
+                        android:background="#1565C0"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:scrollHorizontally="false"
+                android:layout_gravity="left"
+                android:text="Virus Hunt is an adventure game where you travel the world, virtually, from east to west, find hidden viruses and kill them.
+\n
+\n1. Search a place on the map
+\n2. Zoom in to level 13 or more
+\n3. Locate viruses
+\n4. Tap and kill them, Thanos style !
+\n
+\nLogin to record your scores
+\n
+\nHappy hunting !"
+                android:textSize="15sp"
+                android:textColor="#1565C0"
+                />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="1dp"
+                        android:background="#1565C0"/>
+            <LinearLayout
+                android:id="@+id/follow_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow:"
+                android:textSize="15sp"
+                android:textColor="#1565C0"
+                android:layout_gravity="center_vertical"/>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/follow_ch_fb"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/icon_facebook_round"
+                    android:onClick="goToChFB"/>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/follow_ch_insta"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/icon_insta_round"
+                    android:onClick="goToChInsta"/>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+                   </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+               </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <include layout="@layout/about_coffee"/>
+
+            <include layout="@layout/about_credits"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_weight="0.8">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/maps"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_map_button"
+                android:onClick="goToMap"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_video_button"
+                android:onClick="playVideo"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/scores"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_home_button"
+                android:onClick="goToHome"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</LinearLayout>

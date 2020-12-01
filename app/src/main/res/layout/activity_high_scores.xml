@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:padding="0dip"
+    tools:context=".HighScoresActivity"
+    android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ImageView
+        android:id="@+id/scores_top_image"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/logo_in_app" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_below="@+id/scores_top_image">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_topscores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/Widget.MaterialComponents.CardView"
+            app:cardBackgroundColor="#FFCE21"
+            android:layout_margin="10dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#FFCE21"
+            app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp">
+        </View>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="High Scores"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center_horizontal"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp">
+        </View>
+
+        <ListView
+            android:id="@+id/scores_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:dividerHeight="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:scrollbars="none"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"/>
+
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Start of your scroes-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_yourscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.MaterialComponents.CardView"
+            app:cardBackgroundColor="#FFCE21"
+            android:layout_margin="10dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#FFCE21"
+            app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="#FFCE21"
+            android:descendantFocusability="blocksDescendants"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+
+
+            <ImageView
+                android:id="@+id/self_score_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".30"
+                android:src="@drawable/no_pic" />
+
+            <TextView
+                android:id="@+id/self_score_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/self_score_image"
+                android:layout_weight=".60"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Your score"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/self_score_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight=".10"
+                android:paddingTop="10dp"
+                android:text="0"
+                android:textColor="#222222" />
+        </RelativeLayout>
+
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/maps"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_map_button"
+                android:onClick="goToMap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/scores"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_home_button"
+                android:onClick="goToHome" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

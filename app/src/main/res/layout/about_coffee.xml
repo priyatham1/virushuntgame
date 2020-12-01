@@ -1,0 +1,135 @@
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_cla_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Widget.MaterialComponents.CardView"
+    app:cardBackgroundColor="#FFCE21"
+    android:layout_margin="16dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#FFCE21"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <ImageView
+            android:id="@+id/about_dev_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/coffee_lab_apps_final" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="1dp"
+            android:background="#1565C0"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scrollHorizontally="false"
+            android:layout_gravity="left"
+            android:text="Like the four cardinal directions, each of us dig different things. PJ Masks and MasterChef compete for that big screen while Biryani and DoodhVaangi vie for the cooking pan.
+            \n
+            \nAnd yet, a long drive in our small segment car with wind whizzing by and a hot cup of filter coffee are our favourite wormholes to planet Utopia.
+            \n
+            \nIn one such moment of zen, we decided to chip in our creativity and build apps that connect the world in a surreal way.
+            \n
+            \nGame on !"
+            android:textSize="15sp"
+            android:textColor="#1565C0"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="1dp"
+            android:background="#1565C0"/>
+
+        <LinearLayout
+            android:id="@+id/follow_cla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow:"
+                android:textSize="15sp"
+                android:textColor="#1565C0"
+                android:layout_gravity="center_vertical"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/follow_cla_fb"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/icon_facebook_round"
+                android:onClick="goToClaFB"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/follow_cla_insta"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/icon_insta_round"
+                android:onClick="goToClaInsta"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/follow_cla_lin"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/icon_linkedin_round"
+                android:onClick="goToClaLi"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/follow_cla_spot"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/icon_spotify_round"
+                android:onClick="goToClaSpo"/>
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/follow_cla_web"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/icon_web_round"
+                android:onClick="goToClaWeb"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

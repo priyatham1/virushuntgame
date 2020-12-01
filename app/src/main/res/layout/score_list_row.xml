@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content"
+    android:background="#FFCE21"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/score_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+  />
+
+    <TextView
+        android:id="@+id/score_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left"
+        android:layout_toRightOf="@+id/score_image"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="15dp"
+        android:textAlignment="gravity"
+        android:textColor="#222222" />
+
+    <TextView
+        android:id="@+id/score_count"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="false"
+        android:gravity="center_vertical"
+        android:textAlignment="viewEnd"
+        android:textColor="#222222" />
+
+
+</LinearLayout>

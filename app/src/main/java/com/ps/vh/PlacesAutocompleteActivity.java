@@ -35,7 +35,7 @@ public class PlacesAutocompleteActivity extends FragmentActivity {
         // Initialize the AutocompleteSupportFragment.
 
         if (!Places.isInitialized()) {
-            Places.initialize(getApplicationContext(), "AIzaSyAt-Li9MFqD1KJ_IRyy_k8CRnqsjc1TtmY", Locale.US);
+            Places.initialize(getApplicationContext(), "XXXXX", Locale.US);
         }
 
         // Set the fields to specify which types of place data to return.
